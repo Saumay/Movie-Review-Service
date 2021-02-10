@@ -91,7 +91,7 @@ class ServiceTest {
         String movieName = "Don";
         service.addMovie("\"" + movieName + "\" released in Year 2021 for Genres \"Action\" & \"Comedy\"");
         service.addUser("SRK");
-        String expectedMessage = "'" + movieName + "' Multiple reviews not allowed";
+        String expectedMessage = "'" + movieName + "' Movie yet to be released";
 
         // when
         Exception exception = assertThrows(MovieYetToBeReleasedException.class, () -> {
